@@ -1,66 +1,155 @@
 *{
     padding:0;
-    margin: 0
+    margin: 0;
+    box-sizing: border-box;
+
 }
 
-body{
-    background-image: url(./images/back.png);
+  body{
+    background-image: url("./images/images.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    color: #444;
+    color: #444; /* default text color*/
     letter-spacing: 4px;
-}
-
-#wrapper{
+    
+ } 
+ #wrapper{
     background-color: #eee;
     max-width: 960px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 30px;
     border: 3px solid #444;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 6px;
-}
+} 
 
 #page-banner{
     background-color: #df5b3f;
     padding: 10px 0;
     text-align: center;
-    color: #fff;
-
+    color: #fff
 }
 
-#movie-list, #add-movie {
+#movie-list, #add-movie{
     margin: 30px;
-
 }
 
 #movie-list ul{
     list-style: none;
 }
 
-#movie-list ul li{
+#movie-list ul li {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between; /* name left, btns right */
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
 
-#movie-list ul li:hover{
-    border-left: #9361 2px solid;
-    background: #f4f4f4;
-
+/* container holding the two buttons */
+#movie-list ul li .btns {
+    display: flex;
+    gap: 6px;       /* small gap between Edit and Delete */
+    align-items: center;
 }
 
-.delete{
-    background-color: red;
-    color: #fff;
+/* make the name take remaining space on the left */
+#movie-list ul li .name {
+    flex: 1;                /* pushes .btns to the right */
+    padding-right: 12px;    /* small spacing between name and buttons */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#movie-list ul li:hover{
+    border-left: #9361bf 2px solid;
+    background: #f4f4f4;
+}
+
+.edit {
+    background-color: blue;
+    color: #eee;
+    border: none;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
+.edit:hover {
+    background-color: blueviolet;
+}
+
+/* when Edit turns into Save */
+.save {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color: darkorange;
+}
+
+.delete {
+    background-color: #df5b3f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background: maroon;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.edit-btn i {
+    color: #4caf50; /* green */
+}
+
+.delete-btn i {
+    color: #e53935; /* red */
+}
+
+.btns button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #444;
+}
+
+.btns button:hover {
+    color: #df5b3f;
+}
+
+.edit-input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+
 #add-movie{
     width: 400px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #add-movie input{
@@ -68,18 +157,88 @@ body{
     padding: 10px;
     border: 1px solid #ccc;
     width: 300px;
-    border-radius: 4px;
-
+    border-radius: 10px;
 }
 
 #add-movie button{
     background: green;
-    border: none;
     color: #fff;
-    padding: 10px, 20px;
-
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;    
 }
 
 #add-movie button:hover{
-    background-color: green;
+    background: blue;
+}
+
+
+/* Confirmation Modal */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dim background */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#confirm-yes {
+  background-color: #df5b3f;
+  color: #fff;
+}
+
+#confirm-yes:hover {
+  background-color: maroon;
+}
+
+#confirm-no {
+  background-color: #ccc;
+  color: #333;
+}
+
+#confirm-no:hover {
+  background-color: #999;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
