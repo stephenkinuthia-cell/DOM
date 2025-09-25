@@ -1,0 +1,85 @@
+*{
+    padding:0;
+    margin: 0
+}
+
+body{
+    background-image: url(./images/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #444;
+    letter-spacing: 4px;
+}
+
+#wrapper{
+    background-color: #eee;
+    max-width: 960px;
+    border: 3px solid #444;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#page-banner{
+    background-color: #df5b3f;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+
+}
+
+#movie-list, #add-movie {
+    margin: 30px;
+
+}
+
+#movie-list ul{
+    list-style: none;
+}
+
+#movie-list ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#movie-list ul li:hover{
+    border-left: #9361 2px solid;
+    background: #f4f4f4;
+
+}
+
+.delete{
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add-movie{
+    width: 400px;
+    margin: auto;
+}
+
+#add-movie input{
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    border-radius: 4px;
+
+}
+
+#add-movie button{
+    background: green;
+    border: none;
+    color: #fff;
+    padding: 10px, 20px;
+
+}
+
+#add-movie button:hover{
+    background-color: green;
+}
