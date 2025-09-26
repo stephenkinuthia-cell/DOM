@@ -1,8 +1,17 @@
 # 🎬 Movie to Watch DOM Project
 
+![GitHub stars](https://img.shields.io/github/stars/stephenkinuthia-cell/Movie-to-Watch-DOM-Project?style=social)
+![GitHub license](https://img.shields.io/github/license/stephenkinuthia-cell/Movie-to-Watch-DOM-Project)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
 A simple, interactive web application that helps users discover and organize movies they might want to watch. Built using JavaScript, HTML, and CSS, this project leverages the power of the Document Object Model (DOM) to create a dynamic user experience.
 
-https://stephenkinuthia-cell.github.io/Movie-to-Watch-DOM-Project/
+🔗 Live Demo
+
+Experience the live version of the application here: [Live Demo](https://stephenkinuthia-cell.github.io/Movie-to-Watch-DOM-Project/)
+
 ## 📌 Features
 
 - **Dynamic Movie List**: Display a curated list of movies with titles, posters, and brief descriptions.
