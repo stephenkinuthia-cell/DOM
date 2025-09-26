@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const list = document.querySelector("#movie-list ul");
   const forms = document.forms;
 
-  // delete + edit with event delegation
+  // delete + edit 
   list.addEventListener("click", function (e) {
     const li = e.target.closest("li");
     if (!li) return;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.classList.add("edit-input");
 
         li.replaceChild(input, currentName);
-        editBtn.className = "fas fa-save"; // change icon to save
+        editBtn.className = "fas fa-save"; 
     } else if (currentName.tagName === "INPUT") {
         // save changes
         const span = document.createElement("span");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         span.textContent = currentName.value.trim() || "Untitled";
 
         li.replaceChild(span, currentName);
-        editBtn.className = "fas fa-edit"; // back to edit icon
+        editBtn.className = "fas fa-edit"; 
     }
     }
 
