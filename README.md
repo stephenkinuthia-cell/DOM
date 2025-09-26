@@ -35,3 +35,17 @@ To run the project locally:
 2. **Edit a Movie**: Click the **Edit** button icon next to a movie to modify its details. After editing, click **Save** to update.
 
 3. **Delete a Movie**: Click the **Delete** button icon next to a movie to remove it from the list.
+
+## 🙌 Special Thanks  
+
+A heartfelt thank you to [**Teach2Give**](https://github.com/Teach2Give) and especially [**Brian Kemboi**](https://github.com/kemboi590) who is my trainer for invaluable guidance, mentorship, and support throughout this project. Your contribution is playing a big role in helping me learn and grow as a developer.  
+
+## 📬 Contact Me
+
+📧 **Email:** [kinuthiastephen94@email.com](mailto:kinuthiastephen94@email.com)  
+💼 **LinkedIn:** [linkedin.com/in/stephen-kinuthia](https://linkedin.com/in/stephen-kinuthia)  
+💻 **GitHub:** [github.com/stephenkinuthia-cell](https://github.com/stephenkinuthia-cell)  
+
+
+
+⭐ If you like this project, consider giving it a **star** on GitHub!
