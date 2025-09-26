@@ -2,6 +2,7 @@
 
 A simple, interactive web application that helps users discover and organize movies they might want to watch. Built using JavaScript, HTML, and CSS, this project leverages the power of the Document Object Model (DOM) to create a dynamic user experience.
 
+https://stephenkinuthia-cell.github.io/Movie-to-Watch-DOM-Project/
 ## 📌 Features
 
 - **Dynamic Movie List**: Display a curated list of movies with titles, posters, and brief descriptions.
